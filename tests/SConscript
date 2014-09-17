@@ -1,0 +1,8 @@
+Import ('env')
+
+name = 'mili'
+inc = env.Dir('.')
+src = env.Glob('*.cpp')
+deps = ['mili','gmock','gtest_main', 'gtest']
+
+env.CreateTest(name, inc, src, deps)

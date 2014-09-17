@@ -1,0 +1,37 @@
+Import ('env')
+
+inc = env.Dir('.')
+deps = ['mili']
+alias = ['mili-examples']
+
+name = 'mili-example_'
+
+env.CreateProgram(name + 'prepos-caller', inc, env.File('example_prepos-caller.cpp'), deps, alias)
+env.CreateProgram(name + 'ranker', inc, env.File('example_ranker.cpp'), deps, alias)
+env.CreateProgram(name + 'container-utils', inc, env.File('example_container-utils.cpp'), deps, alias)
+env.CreateProgram(name + 'variants_set', inc, env.File('example_variants_set.cpp'), deps, alias)
+env.CreateProgram(name + 'fast-list', inc, env.File('example_fast-list.cpp'), deps, alias)
+env.CreateProgram(name + 'is-lossless-sum', inc, env.File('example_is-lossless-sum.cpp'), deps, alias)
+env.CreateProgram(name + 'raii', inc, env.File('example_raii.cpp'), deps, alias)
+env.CreateProgram(name + 'arith-utils', inc, env.File('example_arith-utils.cpp'), deps, alias)
+env.CreateProgram(name + 'coroutines', inc, env.File('example_coroutines.cpp'), deps, alias)
+env.CreateProgram(name + 'compile-assert', inc, env.File('example_compile-assert.cpp'), deps)
+env.CreateProgram(name + 'stream-utils', inc, env.File('example_stream-utils.cpp'), deps, alias)
+env.CreateProgram(name + 'template-info', inc, env.File('example_template-info.cpp'), deps, alias)
+env.CreateProgram(name + 'metaprogramming_utils', inc, env.File('example_metaprogramming_utils.cpp'), deps, alias)
+env.CreateProgram(name + 'delete-container', inc, env.File('example_delete-container.cpp'), deps, alias)
+env.CreateProgram(name + 'loop-unrolling', inc, env.File('example_loop-unrolling.cpp'), deps, alias)
+env.CreateProgram(name + 'promotion-disable', inc, env.File('example_promotion-disable.cpp'), deps, alias)
+env.CreateProgram(name + 'factory', inc, env.File('example_factory.cpp'), deps, alias)
+env.CreateProgram(name + 'factory_registry', inc, env.File('example_factory_registry.cpp'), deps, alias)
+env.CreateProgram(name + 'invariants', inc, env.File('example_invariants.cpp'), deps, alias)
+env.CreateProgram(name + 'bitwise-enums', inc, env.File('example_bitwise-enums.cpp'), deps, alias)
+env.CreateProgram(name + 'type-mapper', inc, env.File('example_type-mapper.cpp'), deps, alias)
+env.CreateProgram(name + 'binary-streams', inc, env.File('example_binary-streams.cpp'), deps, alias)
+env.CreateProgram(name + 'properties', inc, env.File('example_properties.cpp'), deps, alias)
+env.CreateProgram(name + 'string-utils', inc, env.File('example_string-utils.cpp'), deps, alias)
+env.CreateProgram(name + 'coroutines_extended', inc, env.File('example_coroutines_extended.cpp'), deps, alias)
+env.CreateProgram(name + 'coroutines_advanced', inc, env.File('example_coroutines_advanced.cpp'), deps, alias)
+env.CreateProgram(name + 'random-gen', inc, env.File('example_random-gen.cpp'), deps, alias)
+env.CreateProgram(name + 'platform-detection', inc, env.File('example_platform-detection.cpp'), deps, alias)
+env.CreateProgram(name + 'license_text', inc, env.File('example_license_text.cpp'), deps, alias)

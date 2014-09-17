@@ -1,0 +1,3 @@
+# This file contains your block external dependencies references
+google/gtest: 2
+google/gmock: 0

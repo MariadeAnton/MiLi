@@ -1,0 +1,200 @@
+Version 17
+===========
+    * Removed warning from template-info_test.cpp.
+    * Changed MiLi license from GPL3 to Boost Software License - Version 1.0.
+    * license_text: Added a file named "license_text.h" that provide functions to print licenses disclaimers. 
+    * Factory Registry: Added an internal file named "factory_registry.h". It Added support to automatic derived classes registry
+    * Type mapper: added the map_type_ macro when no 'typename' is required.
+    * Changed the interface of Disposal Policy.
+    * Initial support for C++0x static_assert in compile_assert.
+    * Fixed example_compile-assert.cpp
+    * Added support for list and set in stream_utils.
+    * Added support for queue in container_utils::insert_into
+    * Added UniqueRanker class to Ranker library.
+    * Added is_basic_string to template_info.
+    * Added bostream concatenation feature to binary_streams.
+    * Added template_is_container to template_info
+    * Randomizer moved from arith_utils.h to a new file random_gen.h
+    * Fixed compiler error in Windows due to Randomizer's use of Unix functions.
+    * Improved binary_streams:
+        - Added manual container writers.
+        - Added manual container readers.
+        - Added generic container support.
+        - Included a runtime_error exception hierarchy.
+    * Added generic_exception library.
+    * Changing Ranker::begin and Ranker::end method definitions in ranker.h, 
+      to support gcc 4.5.1.
+    * Added ensure_found function to string_utils.h
+    * Removed warnings in fast_list.h when compiling with -Wextra
+    * Ran astyle
+    * Added power() function in arith_utils
+    * Added cubic_root in arith_utils
+    * Added RAII library.
+    * Added substr() functions in string_utils.
+    * Fixed a bug in random_gen for integral type ranges of size 1.
+    * Fixed a bug in stream_utils for operator>> with Separator
+    * Fixed a bug in arith_utils in_range example
+    * Added implies() function in arith_utils
+    * Fixed a bug for using string_utils in Mac OS Ver. 10.6.8
+    * Added auto_array
+    * Added metaprogramming_utils
+    * Fixed some bugs in template_info for const pointer and references
+    * Added NonCopyable
+    * Fixed Generic Exceptions bug when MILI_NAMESPACE is used
+    * Adapted UniqueRanker to support incomparable elements 
+    * Removing MILI_NAMESPACE flag, adding NO_MILI_NAMESPACE (deprecated)
+    * Fixed the overloading an operator with templates in global namespace topic
+    * Removed BSTREAMS_DEBUG guard and added policies classes
+    * Added PlatformDetection library.
+    * Changed s.copy to s._Copy_s in tests/binary-streams_test.cpp for Visual C++. Also corrected float initialization in that file.
+    * Changed '_Pos' by 'Pos_' and '_Count' by 'Count_' in file 'mili/string_utils.h' (and its example and tests), breaking backward compatibility.
+    * Fixed compiler error in container_reader, by adding new methods to bistream; also fixed compiler errors and warnings en examples.
+
+Version 16
+============
+    * Added method clear() and a global function containerAdapter()
+      to container_utils.h.
+    * Added the ability to be iterated by AutonomousIterator to VariantsSet.
+    * Added remove_all without applying the DisposalPolicy to Ranker.
+    * Added remove_first without applying the DisposalPolicy to Ranker.
+    * Added DisposalPolicy to Ranker.
+    * Added remove_first_from to container_utils for Ranker.
+    * Added remove_all_from to container_utils for Ranker.
+    * Added VariantsSet library.
+    * Fixed serious bug in mili::bchain.
+
+Version 15
+============
+    * BinaryStreams now checks types to avoid using pointers.
+    * BinaryStreams standarizes unsigned int operations to 32 bits types from
+      <stdint.h> to allow for some multi-platform support.
+    * Added is_lossless_sum and is_lossless_sum_bigsmall to check adsorption.
+    * Added AutonomousIterator to container_utils.
+    * Added Coroutines library.
+    * Added FastList library.
+    * container_utils: ContainerAdapter changed to support set
+      in a more generic way (returning the element just inserted
+      goes beyond the responsibility of the adapter).
+    * Added remove_first_from to container_utils.
+    * Added remove_all_from to container_utils.
+    * Added reset to FirstTimeFlag.
+    * Added Ranker library.
+
+Version 14
+==========
+    * Added template_info.
+
+Version 13.1
+============
+    * compile_assert enhanced to be used inside template classes.
+
+Version 13
+==========
+    * Added compile_assert.
+
+Version 12.3
+============
+    * Enhanced support for sets in container_utils (insert_into) and delete_container
+
+Version 12.2
+============
+    * Added maximize, minimize, and square to arith-utils.
+    * Added extra assertion to binary_streams.
+
+Version 12.1
+============
+    * Added copy_container to container-utils.
+    * Added FirstTimeFlag to arith-utils.
+    * Fixed bugs in binary_streams.
+
+Version 12
+==========
+    * Added loop_unrolling.
+
+Version 11.1
+============
+    * Fixed bug with -DMILI_NAMESPACE.
+
+Version 11
+==========
+    * Added binary_streams.
+
+Version 10.4
+============
+    * Added bchain to arith-utils.
+
+Version 10.3
+============
+    * Fixed bug in prepos caller.
+
+Version 10.2
+============
+    * Added nothrow version of find.
+
+Version 10.1
+============
+    * Added support for separators in istream stream-utils.
+
+Version 10.0
+============
+    * Added arith-utils.
+    * trim() function added to string-utils.
+
+Version 9.2
+===========
+    * Added BasicType, and const/ref removals to type-mapper.
+
+Version 9.1
+===========
+    * ContainerAdapter addded to container utils.
+
+Version 9.0
+===========
+    * Find utils renamed to container utils.
+    * Installation script added.
+
+Version 8.1
+===========
+    * from_string function added tu string-utils.
+
+Version 8.0
+===========
+    * Stream utils added.
+
+Version 7.0
+===========
+    * Find utils added.
+
+Version 6.0
+===========
+    * String utils added.
+
+Version 5.1
+===========
+    * replaced tabs for spaces.
+    * added 'PROPERTIES' define in properties.
+
+Version 5.0
+===========
+    * Properties added.
+
+Version 4.1
+===========
+    * classes auto_delete_container and auto_vector_delete_container added.
+
+Version 4.0
+===========
+    * Type mapper added.
+
+Version 3.0
+===========
+    * Invariants added.
+
+Version 2.0
+==========
+    * Factory added.
+    * Added support for Associative containers in delete_container.
+
+Version 1.0
+===========
+    * First release.
