@@ -36,7 +36,7 @@ private:
     void _register_factory(const Key& k)
     {
         ++users;
-        fc.register_factory<DerivedClass>(k);
+        fc.template register_factory<DerivedClass>(k);
     }
     BaseClass* _new_class(const Key& k)
     {
