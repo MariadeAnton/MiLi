@@ -1,9 +1,21 @@
+MiLi
+====
 MiLi: A set of minimal libraries composed only by 1 header file each.
     Copyright (C) 2009 - 2013  Daniel Gutson et al, FuDePAN
 
 See the online documentation, new versions, and issue tracking at http://mili.googlecode.com
 
-Basic usage:
+Notes
+=====
+
+** This is an adaptation of the original library http://mili.googlecode.com to enable its use with Biicode.
+
+Github repository link: https://github.com/MariadeAnton/MiLi
+
+Biicode repository link: http://www.biicode.com/hithwen/mili
+
+Basic usage
+============
     * copy the content of the include directory to where your headers files are.
     * just include "mili.h"
     * if you want to enclose the MiLi classes into the mili namespace, #define MILI_NAMESPACE
