@@ -1,0 +1,31 @@
+language: cpp
+compiler:
+- gcc
+before_install:
+- sudo apt-get update -qq
+install:
+- wget http://www.biicode.com/downloads/latest/ubuntu64
+- mv ubuntu64 bii-ubuntu64.deb
+- (! sudo dpkg -i bii-ubuntu64.deb ) && sudo apt-get -f install
+- rm bii-ubuntu64.deb
+- wget http://www.cmake.org/files/v3.0/cmake-3.0.1-Linux-i386.tar.gz
+- tar -xzf cmake-3.0.1-Linux-i386.tar.gz
+- sudo cp -fR cmake-3.0.1-Linux-i386/* /usr
+- rm -rf cmake-3.0.1-Linux-i386
+- rm cmake-3.0.1-Linux-i386.tar.gz
+script:
+- cmake --version
+- bii init biicode_project
+- mkdir -p ./biicode_project/blocks/hithwen/mili
+- mv !(biicode_project) ./biicode_project/blocks/hithwen/mili
+- cd biicode_project
+- bii cpp:build
+- ls ./bin
+- ls ./bin/hithwen_mili_examples_example_template-info
+- ./bin/hithwen_mili_examples_example_random-gen
+after_success:
+- bii user sbaker -p $BII_HITHWEN_PASSWORD
+- bii publish
+env:
+  global:
+    secure: F0iU0LNG1kT47oMLK5GiWfiqIQ1bNYYsist1mGy7ZY+MtBtjWmkgO2IHqaIMq9tKNHZPYoKAKENIKdKToPenHhIm9eJNs4Z27N4Egedx2qzl7tbpjKOKGA/lbaA60JfoBX6qeK+T+/YSbfv3VCiQVuc0g7EHR5r3q1qRdNwM97U=
