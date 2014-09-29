@@ -1,18 +1,17 @@
 MiLi [![Build Status](https://travis-ci.org/hithwen/MiLi.svg?branch=master)](https://travis-ci.org/hithwen/MiLi)
 ====
-MiLi: A set of minimal libraries composed only by 1 header file each.
-    Copyright (C) 2009 - 2013  Daniel Gutson et al, FuDePAN
+A set of minimal libraries composed only by 1 header file each.
+Copyright (C) 2009 - 2013  Daniel Gutson et al, FuDePAN
 
 See the online documentation, new versions, and issue tracking at http://mili.googlecode.com
 
 Notes
 =====
 
-** This is an adaptation of the original library http://mili.googlecode.com to enable its use with Biicode.
+This is an adaptation of the original library http://mili.googlecode.com to enable its use with Biicode.
 
-Github repository link: https://github.com/MariadeAnton/MiLi
-
-Biicode repository link: http://www.biicode.com/hithwen/mili
+* Github repository link: https://github.com/MariadeAnton/MiLi
+* Biicode repository link: http://www.biicode.com/hithwen/mili
 
 Basic usage
 ============
@@ -50,8 +49,12 @@ Basic usage
 
 You might want to copy the include files in an include directory.
 If so, just run the 'install.sh' script:
+
     sudo ./install.sh
+
+
 and then
+
     #include <mili/mili.h>
 
 
