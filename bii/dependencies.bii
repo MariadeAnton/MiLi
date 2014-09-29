@@ -1,7 +1,7 @@
 tests/mili_test_suite.cpp + tests/*_test*.cpp
 tests/mili_test_suite.cpp - tests/ranker_test.cpp
-mili/factory_registry.h - examples/*
-mili/factory_registry.h - tests/*
-mili/ranker.h - examples/*
-mili/ranker.h - tests/*
+
+mili/* - examples/*
+mili/* - tests/*
+
 examples/example_coroutines_extended.cpp - examples/example_coroutines_advanced.cpp

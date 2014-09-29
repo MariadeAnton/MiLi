@@ -8,7 +8,8 @@ include(${CMAKE_HOME_DIRECTORY}/biicode.cmake)
 # Initializes block variables
 INIT_BIICODE_BLOCK()
 
-SET(TEST_FILES tests/arith-utils_tests.cpp
+if (DEFINED ${BII_tests_mili_test_suite_MAIN})
+	SET(TEST_FILES tests/arith-utils_tests.cpp
 			tests/auto_array_test.cpp
 			tests/binary-streams_test.cpp
 			tests/bitwise-enums_test.cpp
@@ -35,12 +36,13 @@ SET(TEST_FILES tests/arith-utils_tests.cpp
 			tests/type-mapper_test.cpp
 			tests/variants_set_test.cpp)
 
-FOREACH(TEST_FILE ${TEST_FILES})
-	list(REMOVE_ITEM BII_LIB_SRC ${TEST_FILE})
-	list(REMOVE_ITEM BII_tests_mili_test_suite_SRC ${TEST_FILE})
-	list(APPEND BII_tests_mili_test_suite_MAIN ${TEST_FILE})
-ENDFOREACH()
-MESSAGE("${BII_tests_mili_test_suite_SRC}")
+	FOREACH(TEST_FILE ${TEST_FILES})
+		list(REMOVE_ITEM BII_LIB_SRC ${TEST_FILE})
+		list(REMOVE_ITEM BII_tests_mili_test_suite_SRC ${TEST_FILE})
+		list(APPEND BII_tests_mili_test_suite_MAIN ${TEST_FILE})
+	ENDFOREACH()
+ENDIF(DEFINED)
+
 ADD_BIICODE_TARGETS()
 
 FOREACH(BII_TARGET ${BII_BLOCK_TARGETS})
