@@ -16,15 +16,15 @@ install:
 script:
 - cmake --version
 - bii init biicode_project
-- mkdir -p ./biicode_project/blocks/hithwen/mili
-- mv !(biicode_project) ./biicode_project/blocks/hithwen/mili
+- mkdir -p ./biicode_project/blocks/danielgutson/mili
+- mv !(biicode_project) ./biicode_project/blocks/danielgutson/mili
 - cd biicode_project
 - bii cpp:build
 - ls ./bin
-- ./bin/hithwen_mili_tests_mili_test_suite
+- ./bin/danielgutson_mili_tests_mili_test_suite
 after_success:
-- bii user sbaker -p $BII_HITHWEN_PASSWORD
+- bii user sbaker -p $BII_danielgutson_PASSWORD
 - bii publish
 env:
   global:
-    secure: IWAdT7Wm2fsjS/izW95ebdIJcn64iHQbMkFoMdZpxZaYVNE6hbQM/IOO+Ls6/aMXUcaSWTsReIcIcR6n2u+TIWK7CX6N9+DQ19l7uL2yBDcrtrvB31Uy9Xi5UCpJ2e9E+GFntjPD+GegzESiRMHx5WdnoQWvabF2xIiDdPgp7gE=
+    secure: f32PAF1lt4Wtm30D4FMQOGEE/tqq2tWSqrcOaKxXmJB1v7OTlRg+smXZtUPIV/Ax/tW/mST0GtoCSsN6tyzEEfLVVzGR/G3/ITsczavD1tflIGKFt7qN13r3g/pMZdnVe/jeKfFJ3sIpAbDgfFc5CrYZk6GUWd3+r9zUP4RQTDc=
