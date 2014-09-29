@@ -11,7 +11,7 @@ Notes
 This is an adaptation of the original library http://mili.googlecode.com to enable its use with Biicode.
 
 * Github repository link: https://github.com/MariadeAnton/MiLi
-* Biicode repository link: http://www.biicode.com/hithwen/mili
+* Biicode repository link: http://www.biicode.com/danielgutson/mili
 
 Basic usage
 ============
