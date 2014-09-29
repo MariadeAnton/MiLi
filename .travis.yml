@@ -21,8 +21,7 @@ script:
 - cd biicode_project
 - bii cpp:build
 - ls ./bin
-- ls ./bin/hithwen_mili_examples_example_template-info
-- ./bin/hithwen_mili_examples_example_random-gen
+- ./bin/hithwen_mili_tests_mili_test_suite
 after_success:
 - bii user sbaker -p $BII_HITHWEN_PASSWORD
 - bii publish
