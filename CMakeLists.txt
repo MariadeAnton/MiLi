@@ -8,7 +8,7 @@ include(${CMAKE_HOME_DIRECTORY}/biicode.cmake)
 # Initializes block variables
 INIT_BIICODE_BLOCK()
 
-if (DEFINED ${BII_tests_mili_test_suite_MAIN})
+if (BII_tests_mili_test_suite_MAIN)
 	SET(TEST_FILES tests/arith-utils_tests.cpp
 			tests/auto_array_test.cpp
 			tests/binary-streams_test.cpp
