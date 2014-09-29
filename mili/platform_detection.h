@@ -45,11 +45,11 @@ platform_detection:
 #    define MILI_OS MILI_OS_LINUX
 
 /* MAC */
-/*#elif defined (macintosh)	\
+#elif defined (macintosh)	\
    || defined (Macintosh)	\
    || defined (__APPLE__)	\
    || defined (__MACH__)
-#    define MILI_OS MILI_OS_MAC*/
+#    define MILI_OS MILI_OS_MAC
 
 /* Unknown OS */
 #else
@@ -65,7 +65,7 @@ platform_detection:
 #define MILI_COMPILER_VS		1
 #define MILI_COMPILER_GCC		2
 #define MILI_COMPILER_ICC		3
-#define MILI_COMPILER_UNKNOWN		4
+#define MILI_COMPILER_UNKNOWN	4
 
 /* Microsoft Visual C++ */
 #if   defined (_MSC_VER)
