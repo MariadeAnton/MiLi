@@ -1,4 +1,4 @@
-MiLi
+MiLi [![Build Status](https://travis-ci.org/hithwen/MiLi.svg?branch=master)](https://travis-ci.org/hithwen/MiLi)
 ====
 MiLi: A set of minimal libraries composed only by 1 header file each.
     Copyright (C) 2009 - 2013  Daniel Gutson et al, FuDePAN
